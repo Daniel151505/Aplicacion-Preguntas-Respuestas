@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class RespuestaModule { 
+export class Respuesta{ 
   nombre: string
   esCorrecta: number
 
