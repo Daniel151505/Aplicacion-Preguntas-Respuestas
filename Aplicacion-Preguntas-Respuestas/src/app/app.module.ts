@@ -7,6 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PreguntaComponent } from './components/pregunta/pregunta.component';
 import { RespuestaComponent } from './components/respuesta/respuesta.component';
+import { BotoneraComponent } from './components/pregunta/botonera/botonera.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RespuestaComponent } from './components/respuesta/respuesta.component';
     DashboardComponent,
     NavbarComponent,
     PreguntaComponent,
-    RespuestaComponent
+    RespuestaComponent,
+    BotoneraComponent
   ],
   imports: [
     BrowserModule,
