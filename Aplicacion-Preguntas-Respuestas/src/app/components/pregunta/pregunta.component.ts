@@ -27,6 +27,10 @@ listarPregunta: Pregunta []
     this.preguntaService.deshabilitarBtn = false
   }
 
-  
+  addClassOption(respuesta: Respuesta){
+    if (respuesta === this.preguntaService.opcionSeleccionada) {
+      return 'active text-light'
+    }
+  }
 
 }
