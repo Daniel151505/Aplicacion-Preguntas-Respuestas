@@ -1,3 +1,10 @@
 .list-group-item {
     cursor: pointer;
 }
+
+.badge {
+    float: right;
+    color:none
+}
+
+
