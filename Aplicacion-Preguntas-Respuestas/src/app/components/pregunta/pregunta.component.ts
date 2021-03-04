@@ -49,6 +49,15 @@ listarPregunta: Pregunta []
 
   }
 
-  
+  iconCorrecta(respuesta: Respuesta){
+    if (respuesta === this.preguntaService.opcionSeleccionada &&
+      this.preguntaService.preguntaConfirmada &&
+      this.preguntaService.opcionSeleccionada.esCorrecta === 1) {
+        return true;
+      } else {
+        return false;
+      }
+  }
+
  
 }
