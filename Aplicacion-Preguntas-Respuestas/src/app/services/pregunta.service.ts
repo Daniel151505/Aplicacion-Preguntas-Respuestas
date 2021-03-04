@@ -11,6 +11,8 @@ export class PreguntaService {
   opcionSeleccionada: Respuesta
   deshabilitarBtn = true
   preguntaConfirmada = false
+  indexRespuesta = null
+  respuestaUsuario: Array<number> = []
 
   public preguntas: Pregunta[] = [
     new Pregunta('Cual es la capital de Argentina', [
