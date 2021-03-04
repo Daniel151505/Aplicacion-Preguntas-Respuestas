@@ -29,5 +29,8 @@ export class PreguntaService {
   ];
   constructor() { }
 
+  getPreguntas() {
+    return this.preguntas.slice()
+  }
 
 }
