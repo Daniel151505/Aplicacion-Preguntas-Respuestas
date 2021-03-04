@@ -8,6 +8,7 @@ import { Pregunta } from 'src/app/models/pregunta.module';
 })
 export class RespuestaComponent implements OnInit {
   listarPreguntas: Pregunta[]
+  respuestasUsuario: any []
   constructor() { }
 
   ngOnInit(): void {
