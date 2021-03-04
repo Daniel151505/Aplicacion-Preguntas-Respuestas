@@ -7,6 +7,9 @@ import { Respuesta } from '../models/respuesta.module';
 })
 export class PreguntaService {
 
+  indexPregunta = 0
+
+
   public preguntas: Pregunta[] = [
     new Pregunta('Cual es la capital de Argentina', [
       new Respuesta('Buenos Aires', 1),
