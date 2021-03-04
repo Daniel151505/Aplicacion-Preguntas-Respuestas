@@ -1,6 +1,9 @@
 <h4 class="card-title"> {{obtenerPregunta()}} </h4>
 <ul class="list-group">
-    <li class="list-group-item" *ngFor="let respuesta of listarPregunta[preguntaService.indexPregunta].respuestas">Opción 1
+    <li class="list-group-item" 
+        *ngFor="let respuesta of listarPregunta[preguntaService.indexPregunta].respuestas"
+        (click)="respuestaSeleccionada(respuesta)">
+        
         {{respuesta.nombre}}
         <span class="badge">
             <i class="material-icons correct">check_circle</i>
