@@ -17,4 +17,8 @@ listarPregunta: Pregunta []
     this.listarPregunta = this.preguntaService.getPreguntas()
   }
 
+  obtenerPregunta(){
+    return this.listarPregunta[this.preguntaService.indexPregunta].descripcionPregunta
+  }
+
 }
