@@ -2,7 +2,8 @@
 <ul class="list-group">
     <li class="list-group-item" 
         *ngFor="let respuesta of listarPregunta[preguntaService.indexPregunta].respuestas"
-        (click)="respuestaSeleccionada(respuesta)">
+        (click)="respuestaSeleccionada(respuesta)"
+        [ngClass]="addClassOption(respuesta)">
         
         {{respuesta.nombre}}
         <span class="badge">
