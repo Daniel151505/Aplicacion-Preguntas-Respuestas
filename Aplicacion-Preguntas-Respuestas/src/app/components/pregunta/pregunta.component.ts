@@ -28,9 +28,27 @@ listarPregunta: Pregunta []
   }
 
   addClassOption(respuesta: Respuesta){
-    if (respuesta === this.preguntaService.opcionSeleccionada) {
-      return 'active text-light'
+     // respuesta seleccionada y NO esta confirmada
+     if (respuesta === this.preguntaService.opcionSeleccionada && !this.preguntaService.preguntaConfirmada) {
+      return 'active text-light';
     }
+
+    // respuesta CORRECTA y esta confirmada
+    if (respuesta === this.preguntaService.opcionSeleccionada &&
+      this.preguntaService.preguntaConfirmada &&
+      this.preguntaService.opcionSeleccionada.esCorrecta === 1) {
+      return 'list-group-item-success';
+    }
+
+    // respuesta es incorrecta y esta confirmada
+    if (respuesta === this.preguntaService.opcionSeleccionada &&
+      this.preguntaService.preguntaConfirmada &&
+      this.preguntaService.opcionSeleccionada.esCorrecta === 0) {
+      return 'list-group-item-danger';
+    }
+
   }
 
+  
+ 
 }
