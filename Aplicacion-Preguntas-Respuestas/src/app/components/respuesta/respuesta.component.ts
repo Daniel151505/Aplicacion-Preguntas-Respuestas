@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pregunta } from 'src/app/models/pregunta.module';
+import { PreguntaService } from 'src/app/services/pregunta.service';
 
 @Component({
   selector: 'app-respuesta',
@@ -9,7 +10,7 @@ import { Pregunta } from 'src/app/models/pregunta.module';
 export class RespuestaComponent implements OnInit {
   listarPreguntas: Pregunta[]
   respuestasUsuario: any []
-  constructor() { }
+  constructor(private preguntaService: PreguntaService) { }
 
   ngOnInit(): void {
   }
