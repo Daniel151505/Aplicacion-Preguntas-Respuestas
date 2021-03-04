@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PreguntaService } from 'src/app/services/pregunta.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { PreguntaService } from 'src/app/services/pregunta.service';
 export class BotoneraComponent implements OnInit {
   btnString = "Aceptar"
 
-  constructor(public preguntaService: PreguntaService) { }
+  constructor(public preguntaService: PreguntaService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,8 +21,6 @@ export class BotoneraComponent implements OnInit {
       case 'Aceptar': {
         this.preguntaService.preguntaConfirmada = true
         this.btnString = 'Siguiente'
-    
-      } 
     }
   }
 
