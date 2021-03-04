@@ -21,6 +21,24 @@ export class BotoneraComponent implements OnInit {
       case 'Aceptar': {
         this.preguntaService.preguntaConfirmada = true
         this.btnString = 'Siguiente'
+
+        if (this.preguntaService.preguntas.length - 1 === this.preguntaService.indexPregunta) {
+          this.btnString = 'Finalizar'
+        }
+        break
+      } 
+      case 'Siguiente': {
+        this.preguntaService.indexPregunta++
+        this.preguntaService.respuestaUsuario.push(this.preguntaService.indexRespuesta)
+        this.preguntaService.deshabilitarBtn = true
+        this.preguntaService.preguntaConfirmada = false
+        this.btnString = 'Aceptar'
+        break
+      }
+      case 'Finalizar': {
+        this.preguntaService.respuestaUsuario.push(this.preguntaService.indexRespuesta)
+        this.router.navigate(['/respuesta'])
+      }
     }
   }
 
