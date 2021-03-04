@@ -8,7 +8,8 @@ import { Respuesta } from '../models/respuesta.module';
 export class PreguntaService {
 
   indexPregunta = 0
-
+  opcionSeleccionada: Respuesta
+  deshabilitarBtn = true
 
   public preguntas: Pregunta[] = [
     new Pregunta('Cual es la capital de Argentina', [
