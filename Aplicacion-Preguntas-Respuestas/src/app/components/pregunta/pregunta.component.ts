@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pregunta } from 'src/app/models/pregunta.module';
 import { PreguntaService } from 'src/app/services/pregunta.service';
 
 @Component({
@@ -8,9 +9,12 @@ import { PreguntaService } from 'src/app/services/pregunta.service';
 })
 export class PreguntaComponent implements OnInit {
 
+listarPregunta: Pregunta []
+
   constructor(public preguntaService: PreguntaService) { }
 
   ngOnInit(): void {
+    this.listarPregunta = this.preguntaService.getPreguntas()
   }
 
 }
