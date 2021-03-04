@@ -13,6 +13,8 @@ export class RespuestaComponent implements OnInit {
   constructor(private preguntaService: PreguntaService) { }
 
   ngOnInit(): void {
+    this.listarPreguntas = this.preguntaService.preguntas
+    this.respuestasUsuario = this.preguntaService.respuestaUsuario
   }
 
 }
