@@ -22,9 +22,13 @@ listarPregunta: Pregunta []
     return this.listarPregunta[this.preguntaService.indexPregunta].descripcionPregunta
   }
 
-  respuestaSeleccionada(respuesta: Respuesta) {
+  respuestaSeleccionada(respuesta: Respuesta, indexRta: number) {
+    if (this.preguntaService.preguntaConfirmada === true) {
+      return
+    }
     this.preguntaService.opcionSeleccionada = respuesta
     this.preguntaService.deshabilitarBtn = false
+    this.preguntaService.indexRespuesta = indexRta
   }
 
   addClassOption(respuesta: Respuesta){
