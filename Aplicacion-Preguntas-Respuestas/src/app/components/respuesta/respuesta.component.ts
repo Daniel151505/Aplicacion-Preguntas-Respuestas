@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pregunta } from 'src/app/models/pregunta.module';
 
 @Component({
   selector: 'app-respuesta',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./respuesta.component.css']
 })
 export class RespuestaComponent implements OnInit {
-
+  listarPreguntas: Pregunta[]
   constructor() { }
 
   ngOnInit(): void {
