@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pregunta } from 'src/app/models/pregunta.module';
+import { Respuesta } from 'src/app/models/respuesta.module';
 import { PreguntaService } from 'src/app/services/pregunta.service';
 
 @Component({
@@ -20,5 +21,12 @@ listarPregunta: Pregunta []
   obtenerPregunta(){
     return this.listarPregunta[this.preguntaService.indexPregunta].descripcionPregunta
   }
+
+  respuestaSeleccionada(respuesta: Respuesta) {
+    this.preguntaService.opcionSeleccionada = respuesta
+    this.preguntaService.deshabilitarBtn = false
+  }
+
+  
 
 }
