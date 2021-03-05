@@ -18,30 +18,31 @@ export class BotoneraComponent implements OnInit {
 
   siguiente() {
     switch (this.btnString) {
-      case 'Aceptar': {
-        this.preguntaService.preguntaConfirmada = true
-        this.btnString = 'Siguiente'
+        case 'Aceptar': {
+          this.preguntaService.preguntaConfirmada = true;
+          this.btnString = 'Siguiente';
 
-        if (this.preguntaService.preguntas.length - 1 === this.preguntaService.indexPregunta) {
-          this.btnString = 'Finalizar'
+          if ( this.preguntaService.preguntas.length - 1 === this.preguntaService.indexPregunta){
+            this.btnString = 'Finalizar';
+          }
+          break;
         }
-        break
-      } 
-      case 'Siguiente': {
-        this.preguntaService.indexPregunta++
-        this.preguntaService.respuestaUsuario.push(this.preguntaService.indexRespuesta)
-        this.preguntaService.deshabilitarBtn = true
-        this.preguntaService.preguntaConfirmada = false
-        this.btnString = 'Aceptar'
-        break
-      }
-      case 'Finalizar': {
-        this.preguntaService.respuestaUsuario.push(this.preguntaService.indexRespuesta)
-        this.preguntaService.opcionSeleccionada = null
-        this.preguntaService.preguntaConfirmada = false
-        this.preguntaService.indexRespuesta = 0
-        this.router.navigate(['/respuesta'])
-      }
+        case 'Siguiente': {
+          this.preguntaService.indexPregunta++;
+          this.preguntaService.respuestaUsuario.push(this.preguntaService.indexRespuesta);
+          this.preguntaService.deshabilitarBtn = true;
+          this.preguntaService.preguntaConfirmada = false;
+          this.btnString = 'Aceptar';
+          break;
+        }
+        case 'Finalizar': {
+          this.preguntaService.respuestaUsuario.push(this.preguntaService.indexRespuesta);
+          this.preguntaService.opcionSeleccionada = null;
+          this.preguntaService.preguntaConfirmada = false;
+          this.preguntaService.indexPregunta = 0;
+          this.router.navigate(['/respuesta']);
+        }
+
     }
   }
 
