@@ -3,5 +3,8 @@
     color:none
 }
 
-
+.material-icons.incorrect {
+    color: #da2d2d;
+    font-size:18px ;
+}
 
