@@ -19,6 +19,7 @@ export class RespuestaComponent implements OnInit {
   }
 
   volver() {
+    this.preguntaService.respuestaUsuario = []
     this.router.navigate(['/'])
   }
 
