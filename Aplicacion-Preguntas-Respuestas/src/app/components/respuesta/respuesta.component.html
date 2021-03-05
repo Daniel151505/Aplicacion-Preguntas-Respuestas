@@ -1,7 +1,7 @@
 <h5 class="card-title">Resultado</h5>
 <p class="card-text">¡Este es el resultado del cuestionario!</p>
-<div>
-    <h4 class="card-title"> </h4>
+<div *ngFor="let pregunta of listarPreguntas; let i= index">
+    <h4 class="card-title"> {{pregunta.descripcionPregunta}} </h4>
 </div>
 <div class="row">
     <div class="col-lg-4 offset-lg-4">
